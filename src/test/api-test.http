@@ -1,0 +1,37 @@
+
+###
+POST http://localhost:3307/products
+Content-Type: application/json
+
+{
+  "name": "Молоко",
+  "amount": 1000,
+  "date_of_create": "01.01.2023",
+  "expiration_date": "01.02.2023",
+  "description": "ценный пищевой продукт, содержащий более 100 питательных веществ, включая белки, жир, молочный сахар, минеральные вещества, фосфолипиды, органические кислоты, витамины, ферменты.",
+  "defect": "незначительные повреждения упоковки"
+}
+
+
+
+###
+GET http://localhost:3307/products
+Accept: application/json
+
+###
+PUT http://localhost:3307/users/1 или 2 например
+Content-Type: application/json
+
+{
+  "name": "Молоко",
+  "amount": 1000,
+  "date_of_create": "01.01.2023",
+  "expiration_date": "01.02.2023",
+  "description": "ценный пищевой продукт, содержащий более 100 питательных веществ, включая белки, жир, молочный сахар, минеральные вещества, фосфолипиды, органические кислоты, витамины, ферменты.",
+  "defect": "какая нибудь другая причина"
+}
+
+
+###
+DELETE http://localhost:3307/products/1 или 2 например
+Content-Type: application/json-patch+json

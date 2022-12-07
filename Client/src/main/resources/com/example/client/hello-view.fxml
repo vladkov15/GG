@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" spacing="20.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.client.Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <TableView fx:id="Table" prefHeight="430.0" prefWidth="860.0">
+        <columns>
+          <TableColumn fx:id="Name" prefWidth="165.5999698638916" text="Название" />
+          <TableColumn fx:id="Amount" minWidth="0.0" prefWidth="75.20001220703125" text="Количество" />
+            <TableColumn fx:id="Description" prefWidth="164.0" text="Описание" />
+            <TableColumn fx:id="FirstDate" prefWidth="249.60006713867188" text="Срок изготовления" />
+            <TableColumn fx:id="SecondDate" prefWidth="211.20001220703125" text="Годен до" />
+        </columns>
+      </TableView>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <TextField fx:id="name" text="Название">
+               <HBox.margin>
+                  <Insets right="5.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="amount" text="Кол-во">
+               <HBox.margin>
+                  <Insets right="5.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="decription" text="Описание">
+               <HBox.margin>
+                  <Insets right="5.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="firstDate" text="Срок изготовления">
+               <HBox.margin>
+                  <Insets right="5.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+            <TextField fx:id="secondDate" text="Годен до">
+               <HBox.margin>
+                  <Insets right="5.0" top="20.0" />
+               </HBox.margin>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox prefHeight="70.0" prefWidth="858.0">
+         <children>
+            <Button fx:id="Add" mnemonicParsing="false" onAction="#btnAddClick" prefHeight="51.0" prefWidth="80.0" text="Добавить">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="Update" mnemonicParsing="false" onAction="#btnUpdateClick" prefHeight="51.0" prefWidth="80.0" text="Обновить">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="Search" mnemonicParsing="false" onAction="#btnSearchClick" prefHeight="51.0" prefWidth="80.0" text="Поиск">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="Delete" mnemonicParsing="false" onAction="#btnClickDelete" prefHeight="51.0" prefWidth="80.0" text="Удалить">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="Refresh" mnemonicParsing="false" onAction="#btnRefreshClick" text="Refresh">
+               <HBox.margin>
+                  <Insets left="300.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="40.0" right="20.0" top="40.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
